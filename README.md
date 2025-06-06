@@ -2,7 +2,7 @@
 
 An AI-powered automation tool that extracts audio from YouTube links and generates subtitles using Groq Whisper Turbo.
 
-> **한국어 문서**: [README_ko.md](README_ko.md) 📖
+> **[한국어](README_ko.md)** 📖
 
 ## ✨ Key Features
 
@@ -71,8 +71,6 @@ YouTube URL → Audio Extract → Speech Recognition → Text Correction → Fil
 'PAST API' → 'FastAPI'
 '보커' → '도커'
 '제미나이' → 'Gemini'
-'솔롬봇' → '솔론봇'
-'웅 떠버린' → '비어버린'
 ```
 
 #### 4-2. AI-based Correction
@@ -102,13 +100,13 @@ result/
 **Example:**
 ```
 result/
-└── 20250606_153406_인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명/
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명.txt
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_metadata.json
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_timestamps.txt
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_corrected.txt
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_corrected_metadata.json
-    └── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_corrected_timestamps.txt
+└── 20250606_153406_MEDIA_TITLE/
+    ├── MEDIA_TITLE.txt
+    ├── MEDIA_TITLE_metadata.json
+    ├── MEDIA_TITLE_timestamps.txt
+    ├── MEDIA_TITLE_corrected.txt
+    ├── MEDIA_TITLE_corrected_metadata.json
+    └── MEDIA_TITLE_corrected_timestamps.txt
 ```
 
 ### Timestamp File Format
@@ -123,7 +121,7 @@ Subtitle with Timestamps (Corrected)
 
 ## ⚙️ Tech Stack
 
- < /dev/null |  Component | Tool/Library | Role |
+|  Component | Tool/Library | Role |
 |-----------|--------------|------|
 | **Audio Extraction** | `yt-dlp` + `ffmpeg` | YouTube → WAV conversion |
 | **Audio Processing** | `pydub` | File splitting, format conversion |
@@ -198,7 +196,7 @@ if file_size_mb > 24:
 ### Basic Usage
 ```bash
 # Process single video
-python main.py "https://www.youtube.com/watch?v=Oaw0mrzZOsY"
+python main.py "YouTube_URL"
 ```
 
 ### Command Line Options

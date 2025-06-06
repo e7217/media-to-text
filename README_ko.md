@@ -69,8 +69,6 @@ YouTube URL → 오디오 추출 → 음성인식 → 텍스트 보정 → 파�
 'PAST API' → 'FastAPI'
 '보커' → '도커'
 '제미나이' → 'Gemini'
-'솔롬봇' → '솔론봇'
-'웅 떠버린' → '비어버린'
 ```
 
 #### 4-2. AI 기반 보정
@@ -97,18 +95,6 @@ result/
     └── 비디오제목_corrected_timestamps.txt # 보정된 타임스탬프
 ```
 
-**예시:**
-```
-result/
-└── 20250606_153406_인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명/
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명.txt
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_metadata.json
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_timestamps.txt
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_corrected.txt
-    ├── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_corrected_metadata.json
-    └── 인공지능 카톡봇 - 솔론봇(1) 소개 및 구조 설명_corrected_timestamps.txt
-```
-
 ### 타임스탬프 파일 형식
 ```
 타임스탬프별 자막 (보정됨)
@@ -121,7 +107,7 @@ result/
 
 ## ⚙️ 기술 스택
 
- < /dev/null |  컴포넌트 | 도구/라이브러리 | 역할 |
+|  컴포넌트 | 도구/라이브러리 | 역할 |
 |---------|----------------|------|
 | **오디오 추출** | `yt-dlp` + `ffmpeg` | YouTube → WAV 변환 |
 | **오디오 처리** | `pydub` | 파일 분할, 포맷 변환 |
@@ -196,7 +182,7 @@ if file_size_mb > 24:
 ### 기본 사용
 ```bash
 # 단일 영상 처리
-python main.py "https://www.youtube.com/watch?v=Oaw0mrzZOsY"
+python main.py "YouTube_URL"
 ```
 
 ### 명령행 옵션
